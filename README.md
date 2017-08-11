@@ -30,4 +30,9 @@
 - mCodeView.setPointInterfere(true); //是否开启点干扰
 - mCodeView.setLineInterfere(true);  //是否开启线干扰
 - mCodeView.setLineInterfereQuantity(8); //干扰线的数量
+- mCodeView.setPointInterfereQuantity(200); //干扰点的数量
+
+# 关于作者
+## AgainstSky
+### 小控件会继续更新解决其中的bug。欢迎大家加群讨论：188089649（群里有很多安卓java大神哦）
 
