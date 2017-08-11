@@ -31,7 +31,9 @@
 - mCodeView.setLineInterfere(true);  //是否开启线干扰
 - mCodeView.setLineInterfereQuantity(8); //干扰线的数量
 - mCodeView.setPointInterfereQuantity(200); //干扰点的数量
-
+- mCodeView.setMatchCase(true); //是否区分验证码大小写，默认区分。如果设置为不区分大小写，则会返回全小写格式
+### Java中获取验证码
+  mCodeView.getVerificationCode();
 ## 效果图：
 ![image](https://github.com/againstsky/pictureverification/raw/master/show.png)
 
