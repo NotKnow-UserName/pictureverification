@@ -35,7 +35,7 @@ publish {
     userOrg = 'againstsky'
     groupId = 'com.againstsky'
     artifactId = 'vcode'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'VerificationCodePicture'
     website = 'https://github.com/againstsky/pictureverification'
 }
