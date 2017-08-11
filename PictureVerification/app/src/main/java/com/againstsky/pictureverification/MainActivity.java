@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.againstsky.pictureverification.view.VerificationCodeView;
 
+
 public class MainActivity extends AppCompatActivity {
 
     EditText codeEt;

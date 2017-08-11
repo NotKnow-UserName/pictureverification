@@ -41,7 +41,7 @@ public class VerificationCodeView extends View{
 
     private int lineInterfereQuantity=4;//干扰线的数量，为双数。
 
-    private int pointInterfereQuantity=200;//干扰点的数量
+    private int pointInterfereQuantity=150;//干扰点的数量
 
     private int codeQuantity=4;//验证码数量，默认为4个，最多6个。
 
@@ -138,6 +138,7 @@ public class VerificationCodeView extends View{
         codePaint.setTextSize(textSize);
         codePaint.setColor(Color.BLACK);
         codePaint.setStyle(Paint.Style.FILL);
+        //codePaint.setTextAlign(Paint.Align.CENTER);
 
         makeCode();
 
@@ -263,23 +264,31 @@ public class VerificationCodeView extends View{
 
     private void drawCode(Canvas canvas){
 
-
+        Paint.FontMetricsInt fontMetrics = codePaint.getFontMetricsInt();
+        int baseline = (h - fontMetrics.bottom - fontMetrics.top) / 2;
+        int m=(w-(codeQuantity)*textSize)/(codeQuantity+2);
 
         for (int i = 0; i < codeQuantity; i++) {
-            int r=random.nextInt(40);
-            Log.e(TAG,"r:"+r);
-            int x=i*textSize+textSize/2;
+            int r=random.nextInt(20);
+
+
+            int x=(i+1)*m+i*textSize;
             canvas.save();
             canvas.rotate((Math.random()<0.5?r:-r),x,h/2);
             codePaint.setColor(randomColor());
-            canvas.drawText(verificationCode.charAt(i)+"",x,h/2,codePaint);
+
+            canvas.drawText(verificationCode.charAt(i)+"",x,baseline,codePaint);
             canvas.restore();
         }
 
     }
 
     private void dealTextSize(){
-        textSize=w/(codeQuantity+1);
+        if(w/codeQuantity>h){
+            textSize=h/2;
+        }else {
+            textSize = w / (codeQuantity);
+        }
         codePaint.setTextSize(textSize);
     }
 
