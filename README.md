@@ -38,6 +38,7 @@
 ![image](https://github.com/againstsky/pictureverification/raw/master/show.png)
 
 # 关于作者
-## AgainstSky
+### AgainstSky
+#### 新手啦，大家一起努力一起加油啦！
 ### 小控件会继续更新解决其中的bug。欢迎大家加群讨论：188089649（群里有很多安卓java大神哦）
 
